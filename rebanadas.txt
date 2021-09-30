@@ -8,4 +8,9 @@ calcularTotal(cantidad, precio, estado)
         -TX OK
         -AL OK
 - calcular total para 1 descuento 
+        -1000 OK
 - calcular total para varios descuentos
+        -3000 OK
+        -7000 OK
+        -10000 OK
+        -30000 OK
