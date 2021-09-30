@@ -11,13 +11,19 @@ describe("Totalizador ", () => {
   it("deberia calcular para un estado por defecto", () => {
     expect(calcularTotal(3, 2, "CA")).toEqual(6.495);
   });
+  it("deberia calcular para un estado por defecto", () => {
+    expect(calcularTotal(3, 2, "UT")).toEqual(6.399);
+  });
 });
+
+function impuestoEstado(estado) {
+  let impuestos = { CA: 0.0825, UT: 0.0665, "": 0 };
+  return impuestos[estado];
+}
 
 function calcularTotal(cantidad, precio, estado) {
   let subTotal = cantidad * precio;
-  let impuestoCA = 0.0825;
-  if (estado == "CA") {
-    return subTotal + subTotal * impuestoCA;
-  }
+  let impuesto = impuestoEstado(estado);
+  subTotal = subTotal + subTotal * impuesto;
   return subTotal;
 }
