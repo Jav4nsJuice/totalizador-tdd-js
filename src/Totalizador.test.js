@@ -46,17 +46,11 @@ function impuestoEstado(estado) {
 }
 
 function descuentoPorSubTotal(subTotal){
-  if (subTotal >= 1000 && subTotal < 3000){
-    return 0.03;
-  }else if(subTotal >= 3000 && subTotal < 7000){
-    return 0.05;
-  }else if(subTotal >= 7000 && subTotal < 10000){
-    return 0.07;
-  }else if(subTotal >= 10000 && subTotal < 30000){
-    return 0.1;
-  }else if(subTotal >= 30000){
-    return 0.15;
-  }
+  if (subTotal >= 1000 && subTotal < 3000) return 0.03;
+  else if(subTotal >= 3000 && subTotal < 7000) return 0.05;
+  else if(subTotal >= 7000 && subTotal < 10000) return 0.07;
+  else if(subTotal >= 10000 && subTotal < 30000) return 0.1;
+  else if(subTotal >= 30000) return 0.15;
   return 0;
 }
 
